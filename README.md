@@ -119,3 +119,7 @@ How to using:
         android:layout_height="wrap_content" />
 ```
 
+- Result:
+![Result](https://github.com/thang86/CustomListViews/blob/master/images/ListView.png)
+
+
