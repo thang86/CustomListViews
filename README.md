@@ -19,7 +19,7 @@ private Adapter adapter;
 
         @Override
         public void onChanged() {
-            refreshViewsFromAdapter();
+            refreshViews();
         }
 
         @Override
@@ -68,7 +68,7 @@ private Adapter adapter;
         }
     }
 
-    protected void refreshViewsFromAdapter() {
+    protected void refreshViews() {
         SparseArray<List<View>> typedViewsCacheCopy = typesViews;
         typesViews = new SparseArray<List<View>>();
         removeAllViews();

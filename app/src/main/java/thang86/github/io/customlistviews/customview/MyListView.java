@@ -22,7 +22,7 @@ public class MyListView extends LinearLayout {
 
         @Override
         public void onChanged() {
-            refreshViewsFromAdapter();
+            refreshViews();
         }
 
         @Override
@@ -71,7 +71,7 @@ public class MyListView extends LinearLayout {
         }
     }
 
-    protected void refreshViewsFromAdapter() {
+    protected void refreshViews() {
         SparseArray<List<View>> typedViewsCacheCopy = typesViews;
         typesViews = new SparseArray<List<View>>();
         removeAllViews();
