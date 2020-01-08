@@ -1,19 +1,22 @@
-# MyListView
-Custom ViewGroup same as ListView
+package thang86.github.io.customlistviews.customview;
+
+import android.content.Context;
+import android.database.DataSetObserver;
+import android.util.AttributeSet;
+import android.util.SparseArray;
+import android.view.View;
+import android.widget.Adapter;
+import android.widget.LinearLayout;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
-
-# Sample CustomView same as ListView!
-
-
-
-
-- Code sample:
-
-
-
-```sh
-private Adapter adapter;
+/**
+ * @Author ThangTX2
+ */
+public class MyListView extends LinearLayout {
+    private Adapter adapter;
     private SparseArray<List<View>> typesViews = new SparseArray<List<View>>();
     private final DataSetObserver observer = new DataSetObserver() {
 
@@ -101,21 +104,4 @@ private Adapter adapter;
         }
         return null;
     }
-```
-
-How to using:
- - In Fragment,Activity:
-```sh
-   final MyListView mMyListView = view.findViewById(R.id.my_list_view);
-   adapter = new MyAdapter(getContext(), mStudentList, this);
-   mMyListView.setAdapter(adapter);
-```
-- layout:
-```sh
-     <thang86.github.io.customlistviews.customview.MyListView
-        android:id="@+id/my_list_view"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-```
-
+}
